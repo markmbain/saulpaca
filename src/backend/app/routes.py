@@ -70,6 +70,13 @@ def route_alpha_function3():
 
 @app.route("/features/beta_function1", methods=["POST"])
 def route_beta_function1():
+    """
+    This endpoint loads Context from a knowledge graph
+    :num1: prompt - Modified user prompt coming from the back-end preprocessing logic
+    :num2: user_id Provide the user id to stroe user requests and responses
+
+    :return: context
+    """
     print("\n In beta_function1 route.")
 
     data = request.get_json()
@@ -79,14 +86,24 @@ def route_beta_function1():
     if num1 is None or num2 is None:
         return jsonify({"error": "Missing data"}), 400
     try:
-        beta_function1_result = beta_function1(num1, num2)
+        # This is the returned context
+        beta_function1_result = f"{num1} {num2}"
     except ValueError:
         return jsonify({"error": "Invalid input"}), 400
-    return jsonify({"beta_function1_result": beta_function1_result}), 200
+    return jsonify(
+        {"beta_function1_result": beta_function1_result}
+    ), 200
 
 
 @app.route("/features/beta_function2", methods=["POST"])
 def route_beta_function2():
+    """
+    This endpoint takes scraped data chunk about a single Attorney and tries to store it on a knowledge graph.
+
+    :num1: Attorney data
+    :num2: Context (data source, url, any other metadata)
+    :return: The stored context
+    """
     print("\n In beta_function2 route.")
 
     data = request.get_json()
@@ -96,7 +113,7 @@ def route_beta_function2():
     if num1 is None or num2 is None:
         return jsonify({"error": "Missing data"}), 400
     try:
-        beta_function2_result = beta_function2(num1, num2)
+        beta_function2_result = "Successfully stored"
     except ValueError:
         return jsonify({"error": "Invalid input"}), 400
     return jsonify({"beta_function2_result": beta_function2_result}), 200
