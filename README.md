@@ -5,7 +5,8 @@ Better **Call SaulPaca** is a groundbreaking project aimed at
 > In the United States, 40 millions of lawsuits are filed every year, and finding the right lawyer can be a daunting task. Our goal is to create a one-stop shop, free of charge, that leverages advanced technologies to match citizens and organizations with the perfect legal expert.
 
 <p align="center">
-  <img alt="llama_track" src="https://github.com/markmbain/saulpaca/blob/main/assets/images/saulpaca.jpeg?raw=true">
+  <img alt="llama_track" src="https://github.com/markmbain/saulpaca/blob/master/assets/images/saulpaca.jpeg?raw=true">
+
 </p>
 
 ## Quickstart 🏁
