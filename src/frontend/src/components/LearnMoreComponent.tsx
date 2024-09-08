@@ -6,7 +6,7 @@ import {
 
 export default function LearnMoreComponent() {
   return (
-    <div className="relative isolate overflow-hidden bg-white py-24 sm:py-32">
+    <div className="relative isolate overflow-hidden bg-white">
       <div
         aria-hidden="true"
         className="absolute -top-80 left-[max(6rem,33%)] -z-10 transform-gpu blur-3xl sm:left-1/2 md:top-20 lg:ml-20 xl:top-3 xl:ml-56"
@@ -80,6 +80,14 @@ export default function LearnMoreComponent() {
                 </div>
               </figcaption>
             </figure>
+            <div className="mt-10 flex items-center gap-x-6">
+              <a
+                href="/result"
+                className="rounded-md bg-lime-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-lime-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              >
+                Get started
+              </a>
+            </div>
           </div>
           <div className="max-w-xl text-base leading-7 text-gray-700 lg:col-span-7">
             <div className="text-3xl text-black">
