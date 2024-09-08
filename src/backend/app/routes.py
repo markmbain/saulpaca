@@ -73,7 +73,7 @@ def route_beta_function1():
     """
     This endpoint loads Context from a knowledge graph
     :num1: prompt - Modified user prompt coming from the back-end preprocessing logic
-    :num2: user_id Provide the user id to stroe user requests and responses
+    :num2: user_id Provide the user id to store user requests and responses
 
     :return: context
     """
