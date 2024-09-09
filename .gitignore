@@ -1,3 +1,5 @@
+src/backend/data/*.json
+
 # PyCharm
 .idea/
 *.iml

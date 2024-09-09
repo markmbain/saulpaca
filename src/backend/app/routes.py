@@ -87,7 +87,8 @@ def route_beta_function1():
         return jsonify({"error": "Missing data"}), 400
     try:
         # This is the returned context
-        beta_function1_result = f"{num1} {num2}"
+        beta_function1_result = beta_function1(num1, num2)
+
     except ValueError:
         return jsonify({"error": "Invalid input"}), 400
     return jsonify(
